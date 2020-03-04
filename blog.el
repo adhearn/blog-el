@@ -15,7 +15,7 @@
     (time)
   "Insert an appropriate Jekyll header with date TIME."
   (let ((formatted-date (format-time-string blog-date-format-string time)))
-    (insert (format "---\nlayout: post\ntitle: \ndate: %s\ncategories: \n---" formatted-date))
+    (insert (format "---\nlayout: post\ntitle: \ndate: %s\ncategories: \npublished: false\n---" formatted-date))
     (insert "\n")))
 
 (defun blog-make-post
